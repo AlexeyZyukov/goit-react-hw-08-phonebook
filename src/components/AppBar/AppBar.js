@@ -1,10 +1,11 @@
 import Navigation from '../Navigation/Navigation';
-
-
-import styles from './components/styles.module.css';
+import Container from '../Container/Container';
 
 export default function App() {
-    return (
-        <Navigation />
-    );
+  return (
+    <Container>
+      <Navigation />
+      <hr />
+    </Container>
+  );
 }
