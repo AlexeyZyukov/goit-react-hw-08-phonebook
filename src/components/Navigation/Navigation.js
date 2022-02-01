@@ -3,13 +3,23 @@ import s from './Navigation.module.css';
 
 const Navigation = () => (
   <nav>
-    <NavLink exact to="/" activeClassName={s.activeLink}>
+    <NavLink exact to="/" className={s.link} activeClassName={s.activeLink}>
       Home
     </NavLink>
-    <NavLink exact to="/register" activeClassName={s.activeLink}>
+    <NavLink
+      exact
+      to="/register"
+      className={s.link}
+      activeClassName={s.activeLink}
+    >
       Register
     </NavLink>
-    <NavLink exact to="/login" activeClassName={s.activeLink}>
+    <NavLink
+      exact
+      to="/login"
+      className={s.link}
+      activeClassName={s.activeLink}
+    >
       Login
     </NavLink>
   </nav>
