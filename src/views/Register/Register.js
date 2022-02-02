@@ -41,6 +41,7 @@ export default function RegisterView() {
           <input
             type="text"
             name="name"
+            placeholder="enter your name"
             // value={name}
             // onChange={handleChange}
             className={s.input}
@@ -53,6 +54,7 @@ export default function RegisterView() {
           <input
             type="email"
             name="email"
+            placeholder="enter e-mail"
             // value={email}
             // onChange={handleChange}
             className={s.input}
@@ -64,6 +66,7 @@ export default function RegisterView() {
           <input
             type="password"
             name="password"
+            placeholder="create password"
             // value={password}
             // onChange={handleChange}
             className={s.input}
