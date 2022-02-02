@@ -1,6 +1,6 @@
 import s from './register.module.css';
 
-export function RegisterView() {
+export default function RegisterView() {
   // const dispatch = useDispatch();
   // const [name, setName] = useState('');
   // const [email, setEmail] = useState('');
@@ -29,7 +29,7 @@ export function RegisterView() {
 
   return (
     <>
-      <h1 style={{ textAlign: 'center', marginTop: 20 }}>Create an account</h1>
+      <h2 style={{ textAlign: 'center', marginTop: 20 }}>Create an account</h2>
       <br />
       <form
         // onSubmit={handleSubmit}
@@ -44,6 +44,7 @@ export function RegisterView() {
             // value={name}
             // onChange={handleChange}
             className={s.input}
+            autoFocus="on"
           />
         </label>
 
@@ -70,7 +71,7 @@ export function RegisterView() {
         </label>
 
         <button type="submit" className={s.button}>
-          Continue
+          Register
         </button>
       </form>
     </>
