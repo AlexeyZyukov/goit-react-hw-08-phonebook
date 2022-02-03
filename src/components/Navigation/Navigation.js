@@ -7,7 +7,7 @@ const Navigation = () => (
       exact="true"
       to="/"
       className={s.link}
-      activeClassName={s.activeLink}
+      // activeClassName={s.activeLink}
     >
       Home
     </NavLink>
@@ -15,7 +15,7 @@ const Navigation = () => (
       exact="true"
       to="/register"
       className={s.link}
-      activeClassName={s.activeLink}
+      // activeClassName={s.activeLink}
     >
       Register
     </NavLink>
@@ -23,7 +23,7 @@ const Navigation = () => (
       exact="true"
       to="/login"
       className={s.link}
-      activeClassName={s.activeLink}
+      // activeClassName={s.activeLink}
     >
       Login
     </NavLink>
