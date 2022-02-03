@@ -10,7 +10,7 @@ export default function App() {
     <Container>
       <AppBar />
       <Routes>
-        <Route path="/" exact element={<HomePage />} />
+        <Route path="/" exact="true" element={<HomePage />} />
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />
       </Routes>

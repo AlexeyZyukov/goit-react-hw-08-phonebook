@@ -3,11 +3,16 @@ import s from './Navigation.module.css';
 
 const Navigation = () => (
   <nav>
-    <NavLink exact to="/" className={s.link} activeClassName={s.activeLink}>
+    <NavLink
+      exact="true"
+      to="/"
+      className={s.link}
+      activeClassName={s.activeLink}
+    >
       Home
     </NavLink>
     <NavLink
-      exact
+      exact="true"
       to="/register"
       className={s.link}
       activeClassName={s.activeLink}
@@ -15,7 +20,7 @@ const Navigation = () => (
       Register
     </NavLink>
     <NavLink
-      exact
+      exact="true"
       to="/login"
       className={s.link}
       activeClassName={s.activeLink}
