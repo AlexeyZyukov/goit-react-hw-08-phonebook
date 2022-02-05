@@ -25,7 +25,7 @@ export default function RegisterPageViewView() {
   const handleSubmit = e => {
     e.preventDefault();
     dispatch(
-      authOperations.RegisterPageView({
+      authOperations.register({
         name,
         email,
         password,

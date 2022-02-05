@@ -13,7 +13,7 @@ const Navigation = () => (
     </NavLink>
     <NavLink
       exact="true"
-      to="/RegisterPageView"
+      to="/register"
       className={s.link}
       // activeClassName={s.activeLink}
     >
@@ -21,7 +21,7 @@ const Navigation = () => (
     </NavLink>
     <NavLink
       exact="true"
-      to="/LoginPageView"
+      to="/login"
       className={s.link}
       // activeClassName={s.activeLink}
     >

@@ -11,8 +11,8 @@ export default function App() {
       <AppBar />
       <Routes>
         <Route path="/" exact="true" element={<HomePageView />} />
-        <Route path="/RegisterPageView" element={<RegisterPageView />} />
-        <Route path="/LoginPageView" element={<LoginPageView />} />
+        <Route path="/register" element={<RegisterPageView />} />
+        <Route path="/login" element={<LoginPageView />} />
       </Routes>
     </Container>
   );
