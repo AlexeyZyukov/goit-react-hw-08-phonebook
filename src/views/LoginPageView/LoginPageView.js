@@ -1,6 +1,6 @@
-import s from './login.module.css';
+import s from './LoginPageView.module.css';
 
-export default function Login() {
+export default function LoginPageView() {
   return (
     <>
       <h2 style={{ textAlign: 'center', marginTop: 20 }}>

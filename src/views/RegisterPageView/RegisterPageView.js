@@ -2,9 +2,9 @@ import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import authOperations from '../../redux/auth/auth-operations';
 
-import s from './register.module.css';
+import s from './RegisterPageView.module.css';
 
-export default function RegisterView() {
+export default function RegisterPageViewView() {
   const dispatch = useDispatch();
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
@@ -25,7 +25,7 @@ export default function RegisterView() {
   const handleSubmit = e => {
     e.preventDefault();
     dispatch(
-      authOperations.register({
+      authOperations.RegisterPageView({
         name,
         email,
         password,
@@ -39,26 +39,6 @@ export default function RegisterView() {
     setEmail('');
     setPassword('');
   }
-  // const handleChange = ({ target: { name, value } }) => {
-  //     switch (name) {
-  //         case 'name':
-  //             return setName(value);
-  //         case 'email':
-  //             return setEmail(value);
-  //         case 'password':
-  //             return setPassword(value);
-  //         default:
-  //             return;
-  //     }
-  // };
-
-  // const handleSubmit = e => {
-  //     e.preventDefault();
-  //     dispatch(authOperations.register({ name, email, password }));
-  //     setName('');
-  //     setEmail('');
-  //     setPassword('');
-  // };
 
   return (
     <>

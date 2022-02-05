@@ -11,8 +11,8 @@ const token = {
   },
 };
 
-const register = createAsyncThunk(
-  'auth/register',
+const RegisterPageView = createAsyncThunk(
+  'auth/RegisterPageView',
   async (credentials, { rejectWithValue }) => {
     try {
       const { data } = await axios.post('user/signup', credentials);
@@ -25,6 +25,6 @@ const register = createAsyncThunk(
 );
 
 const operations = {
-  register,
+  RegisterPageView,
 };
 export default operations;
