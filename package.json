@@ -58,6 +58,7 @@
     "netlify-cli": "^8.16.1",
     "prettier": "^2.5.0",
     "prop-types": "^15.7.2",
+    "react-loader-spinner": "^5.1.1",
     "redux-devtools-extension": "^2.13.9"
   },
   "lint-staged": {

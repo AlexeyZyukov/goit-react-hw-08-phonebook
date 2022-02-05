@@ -1,0 +1,9 @@
+.barHeader {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 20px;
+  padding-right: 18px;
+  padding-bottom: 15px;
+  padding-left: 18px;
+  background: linear-gradient(#437070 25%, #7bb1b1 55%);
+}
