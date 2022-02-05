@@ -29,3 +29,5 @@ yarn-error.log*
 *hide.*
 *copy.*
 *old.*
+# Local Netlify folder
+.netlify
