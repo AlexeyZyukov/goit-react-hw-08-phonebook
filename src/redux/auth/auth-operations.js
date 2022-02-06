@@ -5,10 +5,10 @@ axios.defaults.baseURL = 'https://connections-api.herokuapp.com';
 
 const token = {
   set(token) {
-    axios.defaults.headers.Authorization = `Bearer ${token}`;
+    axios.defaults.headers.common.Authorization = `Bearer ${token}`;
   },
   unset() {
-    axios.defaults.headers.Authorization = '';
+    axios.defaults.headers.common.Authorization = '';
   },
 };
 
@@ -57,6 +57,7 @@ const fetchCurrentUser = createAsyncThunk(
     const persistedToken = state.auth.token;
 
     if (persistedToken === null) {
+      console.log('Токена нет');
       return thunkAPI.rejectWithValue();
     }
 
