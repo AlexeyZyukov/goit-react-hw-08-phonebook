@@ -3,6 +3,7 @@ import { authSelectors } from '../../redux/auth';
 import Navigation from '../Navigation/Navigation';
 import Container from '../Container/Container';
 import AuthMenu from '../AuthMenu/AuthMenu';
+import UserMenu from '../UserMenu/UserMenu';
 import s from './AppBar.module.css';
 // import { NavLink } from 'react-router-dom';
 
@@ -12,9 +13,8 @@ export default function AppBar() {
     <Container>
       <div className={s.barHeader}>
         <Navigation />
-        <AuthMenu />
+        {isLoggedIn ? <UserMenu /> : <AuthMenu />}
       </div>
-      {/* <h1>Welcome!</h1> */}
     </Container>
   );
 }
