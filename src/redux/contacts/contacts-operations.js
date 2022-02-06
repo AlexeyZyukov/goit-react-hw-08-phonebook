@@ -11,29 +11,23 @@ import {
   fetchContactError,
 } from './contacts-actions';
 
-const baseURL = 'https://61ed902f634f2f00170cec65.mockapi.io';
-const axiosInstance = axios.create({
-  baseURL: baseURL,
-});
-
-export const fetchContacts = () => dispatch => {
+export const fetchContacts = () => async dispatch => {
   dispatch(fetchContactRequest());
-
-  axiosInstance
-    .get('/contacts')
-    .then(({ data }) => {
-      console.log('data', data);
-      dispatch(fetchContactSuccess(data.items));
-    })
-    .catch(error => dispatch(fetchContactError(error)));
+  try {
+    const { data } = await axios.get('/contacts');
+    dispatch(fetchContactSuccess(data));
+  } catch (error) {
+    dispatch(fetchContactError(error.message));
+  }
 };
+
 export const addContact =
   ({ name, number }) =>
   dispatch => {
     const contacts = { name, number };
     dispatch(addContactRequest());
 
-    axiosInstance
+    axios
       .post('/contacts', contacts)
       .then(({ data }) => dispatch(addContactSuccess(data)))
       .catch(error => dispatch(addContactError(error)));
@@ -42,7 +36,7 @@ export const addContact =
 export const delContact = contactsId => dispatch => {
   dispatch(delContactRequest());
 
-  axiosInstance
+  axios
     .delete(`/contacts/${contactsId}`)
     .then(() => dispatch(delContactSuccess(contactsId)))
     .catch(error => dispatch(delContactError(error)));
