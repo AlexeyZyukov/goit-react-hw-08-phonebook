@@ -1,7 +1,7 @@
 import { Routes, Route } from 'react-router-dom';
 import { Suspense } from 'react';
 import AppBar from './components/AppBar/AppBar';
-import Loader from './components/Loader/Loader';
+import Spinner from './components/Loader/Loader';
 import Container from './components/Container/Container';
 import HomePageView from './views/HomePageView/HomePageView';
 import RegisterPageView from './views/RegisterPageView/RegisterPageView';
@@ -11,7 +11,7 @@ export default function App() {
   return (
     <Container>
       <AppBar />
-      <Suspense fallback={<Loader />}>
+      <Suspense fallback={<Spinner />}>
         <Routes>
           <Route path="/" exact="true" element={<HomePageView />} />
           <Route path="/register" element={<RegisterPageView />} />

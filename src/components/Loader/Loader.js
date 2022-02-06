@@ -1,12 +1,12 @@
 import { Component } from 'react';
-import { Loader, Puff } from 'react-loader-spinner';
+import { BallTriangle } from 'react-loader-spinner';
 import s from './Loader.module.css';
 
 export default class Spinner extends Component {
   render() {
     return (
       <div className={s.loaderWrapper}>
-        <Puff
+        <BallTriangle
           // type="BallTriangle"
           color="#00BFFF"
           height={100}
