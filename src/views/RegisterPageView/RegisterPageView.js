@@ -46,7 +46,7 @@ export default function RegisterPageViewView() {
         Register to create an account
       </h2>
       <br />
-      <form onSubmit={handleSubmit} className={s.form} autoComplete="off">
+      <form onSubmit={handleSubmit} className={s.form} autoComplete="on">
         <label className={s.label}>
           Name
           <input

@@ -6,7 +6,7 @@ export default function LoginPageView() {
       <h2 style={{ textAlign: 'center', marginTop: 20 }}>
         Sign in to use Phonebook
       </h2>
-      <form className={s.form} autoComplete="off">
+      <form className={s.form} autoComplete="on">
         <label className={s.label}>
           E-mail
           <input
