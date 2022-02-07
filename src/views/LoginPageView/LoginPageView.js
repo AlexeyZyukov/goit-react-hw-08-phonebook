@@ -13,8 +13,9 @@ export default function LoginPageView() {
             type="email"
             name="email"
             placeholder="enter e-mail"
-            className={s.input}
             autoFocus="on"
+            required
+            className={s.input}
           />
         </label>
         <label className={s.label}>
@@ -23,6 +24,7 @@ export default function LoginPageView() {
             type="password"
             name="password"
             placeholder="enter password"
+            required
             className={s.input}
           />
         </label>

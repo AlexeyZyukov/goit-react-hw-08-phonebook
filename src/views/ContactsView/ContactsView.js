@@ -6,7 +6,7 @@ import Filter from '../../components/Filter/Filter';
 import styles from './contactsView.module.css';
 import Container from '../../components/Container/Container';
 
-function Contacts() {
+function ContactsView() {
   const contacts = useSelector(contactsSelectors.filterContacts);
   const dispatch = useDispatch();
   const onDelete = id => dispatch(contactsOperations.delContact(id));
@@ -36,4 +36,4 @@ function Contacts() {
 const mapDispatchToProps = dispatch => ({
   fetchContacts: () => dispatch(contactsOperations.fetchContacts()),
 });
-export default connect(null, mapDispatchToProps)(Contacts);
+export default connect(null, mapDispatchToProps)(ContactsView);
