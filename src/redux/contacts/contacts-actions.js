@@ -1,8 +1,5 @@
 import { createAction } from '@reduxjs/toolkit';
 
-// const asyncGetContacts = createAction('contacts/get');
-// export default { asyncGetContacts };
-
 export const fetchContactRequest = createAction('contacts/fetchContactRequest');
 export const fetchContactSuccess = createAction('contacts/fetchContactSuccess');
 export const fetchContactError = createAction('contacts/fetchContactError');
