@@ -11,8 +11,8 @@ export default function UserMenu() {
     <div className={s.userMenu}>
       <span className={s.userMenuTitle}>Welcome, {name}</span>
       <button
-        className={s.button}
         type="button"
+        className={s.button}
         onClick={() => dispatch(authOperations.logOut())}
       >
         Log out

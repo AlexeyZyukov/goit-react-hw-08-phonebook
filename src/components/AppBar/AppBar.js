@@ -5,7 +5,6 @@ import Container from '../Container/Container';
 import AuthMenu from '../AuthMenu/AuthMenu';
 import UserMenu from '../UserMenu/UserMenu';
 import s from './AppBar.module.css';
-// import { NavLink } from 'react-router-dom';
 
 export default function AppBar() {
   const isLoggedIn = useSelector(authSelectors.getIsLoggedIn);

@@ -2,13 +2,14 @@ import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 
 import { contactsOperations } from '../../redux/contacts';
-import styles from './form.module.css';
+import s from './form.module.css';
 
 export default function Form() {
   const [name, setName] = useState('');
   const [number, setNumber] = useState('');
 
   const dispatch = useDispatch();
+
   const onSubmit = (name, number) =>
     dispatch(contactsOperations.addContact(name, number));
 
@@ -41,11 +42,11 @@ export default function Form() {
   }
 
   return (
-    <form className={styles.form} onSubmit={handleSubmit}>
-      <label className={styles.formLabel}>
-        <p className={styles.inputName}>Name </p>
+    <form className={s.form} onSubmit={handleSubmit}>
+      <label className={s.formLabel}>
+        <p className={s.inputName}>Name </p>
         <input
-          className={styles.formInput}
+          className={s.formInput}
           type="text"
           name="name"
           pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
@@ -55,10 +56,10 @@ export default function Form() {
           required
         />
       </label>
-      <label className={styles.formLabel}>
-        <p className={styles.inputName}> Number</p>
+      <label className={s.formLabel}>
+        <p className={s.inputName}> Number</p>
         <input
-          className={styles.formInput}
+          className={s.formInput}
           type="tel"
           name="number"
           pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"

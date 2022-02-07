@@ -4,20 +4,10 @@ import s from './AuthMenu.module.css';
 export default function AuthMenu() {
   return (
     <div>
-      <NavLink
-        exact="true"
-        to="/register"
-        className={s.link}
-        // activeClassName={s.activeLink}
-      >
+      <NavLink to="/register" exact="true" className={s.link}>
         Register
       </NavLink>
-      <NavLink
-        exact="true"
-        to="/login"
-        className={s.link}
-        // activeClassName={s.activeLink}
-      >
+      <NavLink to="/login" exact="true" className={s.link}>
         Login
       </NavLink>
     </div>
