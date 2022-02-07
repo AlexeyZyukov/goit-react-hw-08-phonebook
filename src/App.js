@@ -7,8 +7,8 @@ import { authOperations } from './redux/auth';
 
 import PrivateRoute from './components/PrivateRoute';
 import PublicRoute from './components/PublicRoute';
-import AppBar from 'components/AppBar/AppBar';
-import Spinner from './components/Loader/Loader';
+import AppBar from './components/AppBar/AppBar.js';
+import Spinner from './components/Loader/Loader.js';
 
 const HomeView = lazy(() => import('./view/HomeView/HomeView'));
 const RegisterView = lazy(() => import('./view/RegisterView/RegisterView'));
