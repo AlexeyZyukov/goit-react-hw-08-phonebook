@@ -5,8 +5,9 @@ export default function AuthMenu() {
   return (
     <div>
       <NavLink to="/register" exact="true" className={s.link}>
-        Register
+        Registration
       </NavLink>
+
       <NavLink to="/login" exact="true" className={s.link}>
         Login
       </NavLink>

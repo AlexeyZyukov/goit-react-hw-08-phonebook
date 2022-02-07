@@ -1,16 +1,16 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useDispatch } from 'react-redux';
+import { useState } from 'react';
 import authOperations from '../../redux/auth/auth-operations';
+import '../RegisterView/RegisterView.css';
 
-import s from './RegisterPageView.module.css';
-
-export default function RegisterPageViewView() {
+export default function RegisterView() {
   const dispatch = useDispatch();
-  const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [name, setName] = useState('');
 
-  const handleChange = ({ target: { name, value } }) => {
+  const handleRegisterChange = ({ target: { name, value } }) => {
     switch (name) {
       case 'name':
         return setName(value);
@@ -18,81 +18,65 @@ export default function RegisterPageViewView() {
         return setEmail(value);
       case 'password':
         return setPassword(value);
+
       default:
-        break;
+        return;
     }
   };
+
   const handleSubmit = e => {
     e.preventDefault();
-    dispatch(
-      authOperations.register({
-        name,
-        email,
-        password,
-      }),
-    );
-    reset();
-  };
-
-  function reset() {
+    dispatch(authOperations.register({ name, email, password }));
     setName('');
     setEmail('');
     setPassword('');
-  }
+  };
 
   return (
-    <>
-      <h2 style={{ textAlign: 'center', marginTop: 20 }}>
-        Register to create an account
-      </h2>
-      <br />
-      <form onSubmit={handleSubmit} className={s.form} autoComplete="on">
-        <label className={s.label}>
-          Name
+    <div className="container">
+      <h1 className=" mainTitle">Register Page</h1>
+      <form className="form" onSubmit={handleSubmit}>
+        <label>
+          <p className="form__label">Name </p>
           <input
-            type="text"
+            className="form__input"
+            type="name"
             name="name"
-            placeholder="enter your name"
-            value={name}
-            onChange={handleChange}
-            required
-            autoFocus="on"
             pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
             title="Имя может состоять только из букв, апострофа, тире и пробелов. Например Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan и т. п."
-            className={s.input}
+            value={name}
+            onChange={handleRegisterChange}
+            required
           />
         </label>
-
-        <label className={s.label}>
-          E-mail
+        <label>
+          <p className="form__label">E-mail </p>
           <input
+            className="form__input"
             type="email"
             name="email"
-            placeholder="enter e-mail"
             value={email}
-            onChange={handleChange}
+            onChange={handleRegisterChange}
             required
-            className={s.input}
           />
         </label>
-
-        <label className={s.label}>
-          Password
+        <label className="form__label">
+          <p className="form__label"> Password</p>
           <input
+            className="form__input"
             type="password"
             name="password"
-            placeholder="create password"
+            title="Пароль должен составлять не менее 8 символов"
             value={password}
-            onChange={handleChange}
+            onChange={handleRegisterChange}
             required
-            className={s.input}
           />
         </label>
 
-        <button type="submit" className={s.button}>
+        <button type="submit" className="button">
           Register
         </button>
       </form>
-    </>
+    </div>
   );
 }

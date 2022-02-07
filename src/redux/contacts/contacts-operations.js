@@ -33,7 +33,7 @@ export const addContact =
       .catch(error => dispatch(addContactError(error)));
   };
 
-export const delContact = contactsId => dispatch => {
+export const delContacts = contactsId => dispatch => {
   dispatch(delContactRequest());
 
   axios

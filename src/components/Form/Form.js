@@ -1,8 +1,7 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
-
-import { contactsOperations } from '../../redux/contacts';
-import s from './form.module.css';
+import { contactsOperations } from 'redux/contacts';
+import '../../view/RegisterView/RegisterView.css';
 
 export default function Form() {
   const [name, setName] = useState('');
@@ -10,21 +9,29 @@ export default function Form() {
 
   const dispatch = useDispatch();
 
-  const onSubmit = (name, number) =>
-    dispatch(contactsOperations.addContact(name, number));
+  const handleChange = e => {
+    const { name, value } = e.currentTarget;
 
-  const handleChange = evt => {
-    const { name, value } = evt.currentTarget;
     switch (name) {
       case 'name':
         setName(value);
         break;
+
       case 'number':
         setNumber(value);
         break;
+
       default:
         return;
     }
+  };
+  const onSubmit = (name, number) =>
+    dispatch(contactsOperations.addContact(name, number));
+
+  const handleSubmit = e => {
+    e.preventDefault();
+    onSubmit({ name, number });
+    reset();
   };
 
   const reset = () => {
@@ -32,21 +39,12 @@ export default function Form() {
     setNumber('');
   };
 
-  function handleSubmit(evt) {
-    evt.preventDefault();
-    onSubmit({
-      name,
-      number,
-    });
-    reset();
-  }
-
   return (
-    <form className={s.form} onSubmit={handleSubmit}>
-      <label className={s.formLabel}>
-        <p className={s.inputName}>Name </p>
+    <form className="form" onSubmit={handleSubmit}>
+      <label>
+        <p className="form__label">Name </p>
         <input
-          className={s.formInput}
+          className="form__input"
           type="text"
           name="name"
           pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
@@ -56,10 +54,10 @@ export default function Form() {
           required
         />
       </label>
-      <label className={s.formLabel}>
-        <p className={s.inputName}> Number</p>
+      <label className="form__label">
+        <p className="form__label"> Number</p>
         <input
-          className={s.formInput}
+          className="form__input"
           type="tel"
           name="number"
           pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
@@ -69,6 +67,7 @@ export default function Form() {
           required
         />
       </label>
+
       <button type="submit" className="button">
         Add contact
       </button>

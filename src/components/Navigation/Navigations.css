@@ -1,31 +1,31 @@
 .nav {
   align-items: center;
 }
-.link {
-  display: inline-block;
+.navLink {
   text-decoration: none;
-  padding: 12px;
-  font-weight: 500;
-  color: #2a363b;
+  font-family: 'Lobster', cursive;
   font-size: 25px;
+  color: 2a363b;
+  align-self: center;
 }
-.link:not(:last-child) {
+
+.navLink:not(:last-child) {
   margin-right: 40px;
 }
-.link:hover,
-.link:hover {
+.navLink:hover,
+.navLink:hover {
   color: #bd0595;
 }
 @media screen and (min-device-width: 320px) and (max-device-width: 479px) {
-  .link {
+  .navLink {
     font-size: 15px;
   }
-  .link:not(:last-child) {
+  .navLink:not(:last-child) {
     margin-right: 20px;
   }
 }
 @media screen and (min-device-width: 480px) and (max-device-width: 767px) {
-  .link {
+  .navLink {
     font-size: 18px;
   }
 }
