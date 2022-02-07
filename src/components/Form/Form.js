@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { contactsOperations } from 'redux/contacts';
+import * as contactsOperations from '../../redux/contacts/contacts-operations';
 import '../../view/RegisterView/RegisterView.css';
 
 export default function Form() {

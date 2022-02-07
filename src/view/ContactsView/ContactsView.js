@@ -1,9 +1,10 @@
 import { useEffect } from 'react';
 import { useSelector, useDispatch, connect } from 'react-redux';
-import { contactsOperations, contactsSelectors } from 'redux/contacts';
-import Container from 'components/Container/Container';
-import Form from 'components/Form/Form';
-import Filter from 'components/Filter/Filter';
+import * as contactsOperations from '../../redux/contacts/contacts-operations';
+import * as contactsSelectors from '../../redux/contacts/contacts-selectors';
+import Container from '../../components/Container/Container';
+import Form from '../../components/Form/Form';
+import Filter from '../../components/Filter/Filter';
 
 import '../ContactsView/ContactsView.css';
 

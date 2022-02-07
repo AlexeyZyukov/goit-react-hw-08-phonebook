@@ -1,6 +1,6 @@
 import { useSelector } from 'react-redux';
-import { authSelectors } from '../../redux/auth';
-import Navigation from '../Navigation/Navigations';
+import authSelectors from '../../redux/auth/auth-selectors';
+import Navigation from '../Navigation/Navigation';
 import UserMenu from '../UserMenu/UserMenu';
 import AuthMenu from '../AuthMenu/AuthMenu';
 import s from './AppBar.module.css';
