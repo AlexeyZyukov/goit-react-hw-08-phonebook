@@ -4,7 +4,7 @@ import Loader from 'react-loader-spinner';
 
 import './Loader.css';
 
-export default class App extends Component {
+export default class Spinner extends Component {
   render() {
     return (
       <div className="loader-wrapper">

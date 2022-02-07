@@ -8,7 +8,7 @@ import { authOperations } from './redux/auth';
 import PrivateRoute from './components/PrivateRoute';
 import PublicRoute from './components/PublicRoute';
 import AppBar from 'components/AppBar/AppBar';
-import Loader from './components/Loader/Loader';
+import Spinner from './components/Loader/Loader';
 
 const HomeView = lazy(() => import('./view/HomeView/HomeView'));
 const RegisterView = lazy(() => import('./view/RegisterView/RegisterView'));
@@ -22,7 +22,7 @@ export default function App() {
   return (
     <div>
       <AppBar />
-      <Suspense fallback={<Loader />}>
+      <Suspense fallback={<Spinner />}>
         <Routes>
           <Route path="/" element={<PublicRoute />}>
             <Route path="/" element={<HomeView />} />
