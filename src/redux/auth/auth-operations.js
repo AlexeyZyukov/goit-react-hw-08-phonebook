@@ -70,7 +70,6 @@ const fetchCurrentUser = createAsyncThunk(
     }
   },
 );
-
 const operations = {
   register,
   logIn,
