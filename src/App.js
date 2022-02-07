@@ -24,9 +24,7 @@ export default function App() {
       <AppBar />
       <Suspense fallback={<Spinner />}>
         <Routes>
-          <Route path="/" element={<PublicRoute />}>
-            <Route path="/" element={<HomePageView />} />
-          </Route>
+          <Route path="/" element={<HomePageView />} />
           <Route
             path="/register"
             element={<PublicRoute restricted redirectTo="/contacts" />}
