@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack://src/view/HomeView/HomeView.css"],"names":[],"mappings":"AAAA,WACE,sCAAwC,CACxC,aAAc,CACd,iBACF","file":"4.8c8f2d58.chunk.css","sourcesContent":[".mainTitle {\n  font-family: 'Permanent Marker', cursive;\n  color: #005e7f;\n  text-align: center;\n}\n"]}
